@@ -10,6 +10,18 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+#header_title {
+    top: 7%;
+    left: 72%;
+    position: relative;
+    font-size: 200px;
+    background: -webkit-linear-gradient(rgba(229,186,48,1), rgba(0,0,0,0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Anton', sans-serif;
+    opacity: 0.6;
+
+}
 #header_photo {
     position: absolute;
     width: 100vw;
@@ -25,12 +37,13 @@ body {
 #navbar {
     width: 100%;
     height: 70px;
-    background-color: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(229,186,48,1) 0%, rgb(255, 255, 255) 35%);
     display: flex;
     line-height: 70px;
     z-index: 10;
     box-sizing: border-box;
     font-family: 'MedievalSharp', cursive;
+    border: 2px solid rgba(229,186,48, 0.6);
 }
 #navbar-left {
     width: 35%;
@@ -44,7 +57,7 @@ body {
 
 }
 #navbar a:hover {
-    color: rgb(229, 186, 48);
+    color: rgba(229, 186, 48, 0.8);
 }
 #navbar-center {
     width: 30%;
@@ -66,6 +79,15 @@ body {
     width: 35%;
     text-align: left;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+}
+.sticky + .home {
+  padding-top: 70px;
+}
 #home_monuments {
     width: 100%;
     height: 1500px;
@@ -74,11 +96,20 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
 }
-.monument {
+.monument_container {
     margin-top: 50px;
     width: 30vw;
     height: 1000px;
     overflow: hidden;
+    border: 4px solid rgba(229, 186, 48, 0.6);
+}
+.monument {
+    background-color: white;
+    transition: all 0.4s linear;
+}
+.monument:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
 }
 #monument1 {
     position: relative;
